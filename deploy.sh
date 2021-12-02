@@ -9,14 +9,14 @@ if [ $1 = "-e" -a $2 = "dev" ]; then
     echo "dev環境に反映します"
     eval echo '${devScriptId}' > .clasp.json
     eval "git checkout develop"
-    # eval "git pull"
+    eval "git pull"
     eval "clasp push"
     # eval echo "" > .clasp.json
 elif [ $1 = "-e" -a $2 = "prd" ]; then
     echo "prd環境に反映します"
     eval echo '${prdScriptId}' > .clasp.json
     eval "git checkout release"
-    # eval "git pull"
+    eval "git pull"
     eval "clasp push"
     # eval echo "" > .clasp.json
 else
