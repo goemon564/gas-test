@@ -1,3 +1,6 @@
 #!/bin/sh
 
-echo "Hello, World!"
+echo "shellを起動"
+
+command="clasp push"
+eval $command
